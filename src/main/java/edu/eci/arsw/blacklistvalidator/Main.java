@@ -15,7 +15,18 @@ public class Main {
     
     public static void main(String a[]){
         HostBlackListsValidator hblv=new HostBlackListsValidator();
-        List<Integer> blackListOcurrences=hblv.checkHost("200.24.34.55");
+
+        // IP dispersa para las pruebas
+        String ip = "202.24.34.55";
+
+        int N = 500;
+
+        long start = System.currentTimeMillis();
+        List<Integer> blackListOcurrences=hblv.checkHost(ip, N);
+        long end = System.currentTimeMillis();
+
+        System.out.println("N = " + N);
+        System.out.println("Tiempo (ms): " + (end - start));
         System.out.println("The host was found in the following blacklists:"+blackListOcurrences);
         
     }
