@@ -15,14 +15,9 @@ public class CountThreadsMain {
         CountThread t = new CountThread(0,99);
         CountThread s = new CountThread(99,199);
         CountThread r = new CountThread(199,299);
-        /* 
         r.start();
         s.start();
         t.start();
-        */
-        r.run();
-        s.run();    
-        t.run();
 
     }
     
